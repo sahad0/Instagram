@@ -2,12 +2,7 @@ import React from 'react'
 
 function Story({stories}) {
 
-    function Img(storie){
-        if(storie){
-            return storie.source;
-        }
-        return "";
-    }
+    
 
 
 
@@ -18,7 +13,7 @@ function Story({stories}) {
                 <li>
                     <div className="position-relative my-3" style={{left:"0",marginRight:"15px",}}>
                         <div className="position-relative" style={{width: "60px", height:"60px", borderRadius:"50%", border: "2px solid #e84118", padding: "1px"}}>
-                        <img src={Img(story)} alt="..." draggable="false" className="img-fluid rounded-circle" style={{cursor:"pointer"}} />
+                        <img src={story.source} alt="..." draggable="false" className="img-fluid rounded-circle" style={{cursor:"pointer"}} />
                         </div>
                         <div className=" text-small mx-2"><small>{story.name}</small></div>
                     </div>
