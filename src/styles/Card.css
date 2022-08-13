@@ -1,0 +1,9 @@
+.search1:focus{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    border: 1px solid white !important;
+}
+.search1{
+    border:1px solid white;
+}
