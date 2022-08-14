@@ -35,11 +35,14 @@
     outline:none;
     box-shadow: none !important;
 }
-
+._ab6-{
+    transform: scale(1);
+}
  
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .searchbar{
       display: none;
     }
+    
   }

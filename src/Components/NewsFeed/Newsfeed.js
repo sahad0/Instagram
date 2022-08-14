@@ -3,6 +3,7 @@ import Story from '../../Components2/Story/Story';
 import { Avatar, List } from 'antd';
 import SuggestionRender from '../../Components2/Suggestion/SuggestionRender';
 import Post from '../../Components2/Post/Post';
+import axios from "axios";
 
 function Newsfeed() {
 
@@ -12,40 +13,42 @@ function Newsfeed() {
     const [post,setPost] = useState([]);
 
     useEffect(()=>{
-      var strs = [ 
-        {"id":1,"name":"fifi______x","source":"./images/me.jpg"},
-        {"id":2,"name":"ErenYeagar","source":"./images/1.jpg"},
-        {"id":3,"name":"Naruto","source":"./images/2.jpg"},
-        {"id":4,"name":"Hinataa","source":"./images/3.png"},
-        {"id":5,"name":"GojoGag","source":"./images/4.jpg"},
-        {"id":6,"name":"ENo_NoW","source":"./images/5.jpg"},
-        {"id":7,"name":"JOkerJk","source":"./images/6.jpg"},
-        {"id":8,"name":"THeLast","source":"./images/7.jpg"},
-        {"id":9,"name":"MikeTys_","source":"./images/8.jpg"},
-        {"id":10,"name":"Willy","source":"./images/9.jpg"},
-      ];
-
-      const sgst = [
-        {"name":"ENo_NoW","source":"./images/5.jpg"},
-        {"name":"JOkerJk","source":"./images/6.jpg"},
-        {"name":"THeLast","source":"./images/7.jpg"},
-        {"name":"MikeTys_","source":"./images/8.jpg"},
-        
-      ];
-
-      var pst = [ 
-        {"id":1,"name":"fifi______x","source":"./images/me.jpg","source1":"./images/anim1.jpg",},
-        {"id":2,"name":"ErenYeagar","source":"./images/1.jpg","source1":"./images/anim3.jpg",},
-        {"id":3,"name":"Naruto","source":"./images/2.jpg","source1":"./images/anim4.jpg",},
-        {"id":4,"name":"Hinataa","source":"./images/3.png","source1":"./images/anim5.jpg",},
-        {"id":5,"name":"GojoGag","source":"./images/4.jpg","source1":"./images/anim2.jpg",},
-    
-      ];
-      setPost(pst);
-      setSuggest(sgst);
-      setStories(strs);
+      
+      fetchStory();
+      fetchSuggest();
+      fetchPost();
+      
     },[]);
 
+    function loadSuggest(){
+      fetchSuggest();
+    }
+    async function fetchStory(){
+      const stry = await axios.get("http://localhost:8000/story");
+     
+      if(stry){
+        setStories(stry.data);
+      }
+      
+    }
+
+    async function fetchSuggest(){
+      const sgst = await axios.get("http://localhost:8002/sgst");
+     
+      if(sgst){
+        setSuggest(sgst.data);
+      }
+      
+    }
+
+    async function fetchPost(){
+      const pst = await axios.get("http://localhost:8001/pst");
+     
+      if(pst){
+        setPost(pst.data);
+      }
+      
+    }
 
 
   return (
@@ -78,7 +81,7 @@ function Newsfeed() {
                       title={<a href="https://ant.design" style={{fontWeight:"bold"}}>fifi________x</a>}
                       description="||$àhád||"
                     />
-                     <div style={{fontWeight:"bold",color:"#3AA1F6",fontSize:"12px",cursor:"pointer"}}>Switch</div>
+                     
                   </List.Item>
                   <List.Item>
                     <List.Item.Meta
@@ -86,9 +89,9 @@ function Newsfeed() {
                       
                       description="Suggestions for you"
                     />
-                     <div style={{fontWeight:"bold",color:"black",fontSize:"12px",cursor:"pointer"}}>See All</div>
+                     <div style={{fontWeight:"bold",color:"black",fontSize:"12px",cursor:"pointer"}} onClick={loadSuggest}>Load More</div>
                   </List.Item>
-                  <SuggestionRender suggest={suggest} />
+                  <SuggestionRender suggest={suggest} setSuggest={setSuggest} />
                   
                   </div>
                 </div>
