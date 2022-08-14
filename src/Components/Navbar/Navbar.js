@@ -57,6 +57,14 @@ function Navbar() {
     setActivity(true);
   }
 
+  const Profile = ()=>{
+    setHome(false);
+    setMessage(false);
+    setPost(false);
+    setPeople(false);
+    setActivity(false);
+  }
+
  
 
 
@@ -92,8 +100,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar sticky-top navbar-expand-lg " style={{ boxShadow: "0 4px 4px -6px #222",backgroundColor:"white" }}>
-        <div className="container-fluid">
+      <nav className="navbar sticky-top navbar-expand-lg " style={{ boxShadow: "0 4px 4px -6px #222",backgroundColor:"white",zIndex:"1" }}>
+        <div className="container-fluid" style={{display:"flex",flexDirection:"row"}}>
           <div className="col-md-5">
             <div className="row">
               <div className="col-md-7"></div>
@@ -110,8 +118,8 @@ function Navbar() {
           <div className="col-md-5">
             
             <Icons home={home} checkTrue={checkTrue}  Home={Home} message={message} Message={Message} post={post} Post={Post} people={people} People={People} activity={activity} Activity={Activity} />
-            <Popover content={content1} placement='bottomRight'>    
-               <Avatar style={{cursor:"pointer"}} size={25} src="./images/me.jpg" />
+            <Popover content={content1} trigger="click" placement='bottomRight' >    
+               <Avatar className='mx-2' style={{cursor:"pointer"}} onClick={Profile} size={25} src="./images/me.jpg" />
             </Popover>
 
 

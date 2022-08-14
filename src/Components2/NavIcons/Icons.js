@@ -66,7 +66,7 @@ export default function Icons({home,Home,message,Message,post,Post,people,People
 
   
   const content = (
-    <div  className='container likesc'  style={{width:"400px",height:"370px",overflow:"auto",}}>
+    <div  className='container likesc'  style={{width:"300px",height:"370px",overflow:"auto",}}>
       <List 
     itemLayout="horizontal"
     dataSource={data}

@@ -67,7 +67,7 @@ function Newsfeed() {
                             </ul>
                         </div>
 
-                        <Post post={post}/>
+                        <Post post={post} setPost={setPost}/>
                     </section>
                     </div>
                 </div>
