@@ -113,7 +113,7 @@ export default function Post({post,setPost}) {
            return (
             
             
-                 <div key={index} className='card my-3 mx-1' >
+                 <div key={index} className='card my-3 mx-1'  onDoubleClick={()=>{likee(posts.id_)}}>
                           <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
                             <div>
                               <Avatar size={38} className='my-3 mx-2'  src={posts.source} />
