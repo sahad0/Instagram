@@ -13,11 +13,13 @@ export default function SuggestionRender({suggest,setSuggest}) {
     }
 
     if(suggest.length>0){
-        return suggest.map((item,i)=>{
+        return suggest.map((item,index)=>{
+            
            return (
-            <>
-            <div  style={{height:"20%",backgroundColor:"#FAFAFA"}} key={i}>
-            <List.Item>
+            
+            
+            <div  key={index} style={{height:"20%",backgroundColor:"#FAFAFA"}} >
+            <List.Item >
                    <List.Item.Meta
                      avatar={<Avatar  src={item.source} />}
                      title={<a href="https://ant.design" style={{fontWeight:"bold",fontSize:"13px"}}>{item.name}</a>}
@@ -27,7 +29,7 @@ export default function SuggestionRender({suggest,setSuggest}) {
                  </List.Item>
             </div>
                 
-           </>
+          
            
            )
            

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Story from '../../Components2/Story/Story';
-import { Avatar, List } from 'antd';
+import {  List } from 'antd';
 import SuggestionRender from '../../Components2/Suggestion/SuggestionRender';
 import Post from '../../Components2/Post/Post';
 import axios from "axios";
+import PostAdd from '../../Components2/addPostComp/postAdd';
 
 function Newsfeed() {
 
@@ -11,6 +12,7 @@ function Newsfeed() {
     const [stories,setStories] = useState([]);
     const [suggest,setSuggest] = useState([]);
     const [post,setPost] = useState([]);
+    
 
     useEffect(()=>{
       
@@ -75,14 +77,10 @@ function Newsfeed() {
             <div className='col-md-5 my-3'>
                 <div className='card sgstcrd' style={{border:"none",backgroundColor:"#FAFAFA"}}>
                   <div className='card' style={{width:"40%",border:"none",backgroundColor:"#FAFAFA"}}>
-                  <List.Item>
-                    <List.Item.Meta
-                      avatar={<Avatar size={55} src="./images/me.jpg" />}
-                      title={<a href="https://ant.design" style={{fontWeight:"bold"}}>fifi________x</a>}
-                      description="||$àhád||"
-                    />
-                     
-                  </List.Item>
+                  
+                  <PostAdd post={post} setPost={setPost} />
+
+
                   <List.Item>
                     <List.Item.Meta
                       
