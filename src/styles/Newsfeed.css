@@ -1,0 +1,35 @@
+.posting{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 20%;
+    column-width: 20%;
+   padding-left: 25%;
+   padding-right: 10%;
+   
+}
+.suggesting{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: auto;
+    column-width: auto;
+    
+    
+  
+}
+
+
+
+@media only screen and (max-width: 1700px) {
+    /* For mobile phones: */
+    
+     .posting{
+        
+        padding: 0 3%;
+     }
+     .suggesting{
+        display: none;
+     }
+    
+  }

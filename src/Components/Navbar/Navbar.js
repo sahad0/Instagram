@@ -3,13 +3,23 @@ import React, { useState } from 'react';
 import { Avatar } from 'antd';
 import Icons from '../../Components2/NavIcons/Icons';
 import {  Popover } from 'antd';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 function Navbar() {
 
 
-
+ 
+ 
+  
+  //Router
+let navigate = useNavigate(); 
+const LogBack = () =>{ 
+  let path = `/logout`; 
+  navigate(path);
+}
 
   
   const [home,setHome] = useState(true);
@@ -92,7 +102,7 @@ function Navbar() {
         
       </p>
       
-      <p onMouseOver={(e)=>{e.target.style.background="#FAFAFA"}  }  onMouseLeave={(e)=>{e.target.style.background="#FFF"}  }   className='m-3' style={{borderTop:"1px solid gray"}}>Log Out</p>
+      <p onMouseOver={(e)=>{e.target.style.background="#FAFAFA"}  }  onMouseLeave={(e)=>{e.target.style.background="#FFF"}  } onClick={LogBack}  className='m-3' style={{borderTop:"1px solid gray",cursor:"pointer"}}>Log Out</p>
     </div>
   
   );

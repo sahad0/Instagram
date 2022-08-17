@@ -55,10 +55,10 @@ function Newsfeed() {
 
   return (
     <>
-    <div className='container-fluid'style={{backgroundColor:"#FAFAFA"}}>
-        <div className='row'>
-            <div className='col-md-3'> </div>
-            <div className='col-md-4'>
+    <div className='container-fluid newsfeed'style={{backgroundColor:"#FAFAFA",display:"flex",flexDirection:"row"}}>
+        
+            
+            <div className='container posting'>
                 <div className='row'>
                     <div className='col-md-1'></div>
                     <div className='col-md-10'>
@@ -74,8 +74,11 @@ function Newsfeed() {
                     </div>
                 </div>
             </div>
-            <div className='col-md-5 my-3'>
-                <div className='card sgstcrd' style={{border:"none",backgroundColor:"#FAFAFA"}}>
+
+
+
+            <div className='container suggesting'>
+                <div className='card sgstcrd my-5' style={{border:"none",backgroundColor:"#FAFAFA"}}>
                   <div className='card' style={{width:"40%",border:"none",backgroundColor:"#FAFAFA"}}>
                   
                   <PostAdd post={post} setPost={setPost} />
@@ -94,8 +97,8 @@ function Newsfeed() {
                   </div>
                 </div>
             </div>
-        </div>
-    </div>
+      </div>
+    
         
     </>
   )
