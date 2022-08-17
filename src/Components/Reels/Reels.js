@@ -43,7 +43,7 @@ export default function Reels() {
                         
                  <ReelsRender img={img} setOpen={setOpen} setModalImg={setModalImg} viewmodal={viewmodal}/>
                  
-         </div></>}
+                </div></>}
                 
          </>
     
