@@ -1,20 +1,16 @@
 import React, { useState } from 'react'
-import {Modal} from "antd";
+
 function Story({stories}) {
 
     
-    const [isModalVisible, setIsModalVisible] = useState(false);
-    const [pic,setPic] = useState("");
-    const showModal = (stry) => {
-        setPic(stry);
-        setIsModalVisible(true);
-    };
-  
-   
-  
-    const handleCancel = () => {
-        setPic("");
-      setIsModalVisible(false);
+    const [open, setOpen] = useState(false);
+    const [modalImg,setModalImg] = useState('');
+
+    function setStory(story){
+            setModalImg(story);
+            if(modalImg){
+                setOpen(true);
+            }
     }
 
 
@@ -24,19 +20,21 @@ function Story({stories}) {
             <div key={i} >
             
                 <li >
-                    <div onClick={()=>{showModal(story.story)}} className="position-relative my-2" style={{left:"0",marginRight:"15px",}} key={story.id}>
+                    <div onClick={()=>{setStory(story.story)}}  className="position-relative my-2" style={{left:"0",marginRight:"15px",}} key={story.id}>
                         <div className="position-relative" style={{width: "60px", height:"60px", borderRadius:"50%", border: "2px solid #e84118", padding: "1px"}}>
                         <img src={story.source} alt="..." draggable="false" className="img-fluid rounded-circle" style={{cursor:"pointer"}} />
                         </div>
                         <div className=" text-small mx-2"><small>{story.name}</small></div>
                     </div>
-                    
+                   
                 </li>
-                <Modal footer={null} centered  style={{margin:"unset",maxWidth:"unset"}}  visible={isModalVisible}  onCancel={handleCancel}>
-                    <div className='container-fluid'>
-                    <img className='img-fluid'src={pic} alt="ipic" style={{scale:"2"}}/>
-                    </div>
-                </Modal>
+
+
+                <div className={open ? "model open" : "model"} >
+                        
+                      <img className='modal-img img-fluid' alt='picc' src={modalImg}   />
+                      <svg onClick={()=>{setOpen(false)}} aria-label="Close" style={{position:"fixed",top:"10px",right:"10px"}} className="fg7vo5n6 lrzqjn8y m-5" color="#ffffff" fill="#ffffff" height="18" role="img" viewBox="0 0 48 48" width="18"><title>Close</title><path clipRule="evenodd" d="M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z" fillRule="evenodd"></path></svg>
+                </div>
            </div>
            
            )

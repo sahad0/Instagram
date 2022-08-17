@@ -1,0 +1,22 @@
+{"reels" : [ 
+    {"id_":1,"src":"./images/pc.jpeg"},
+    {"id_":2,"src":"./images/fox.png"}  ,  
+    {"id_":3,"src":"./images/face.jpg"}  ,  
+    {"id_":4,"src":"./images/angry.jpg"},
+    {"id_":5,"src":"./images/been.jpg"}    ,
+    {"id_":6,"src":"./images/caart1.webp"},
+    {"id_":7,"src":"./images/cart.webp"}    ,
+    {"id_":8,"src":"./images/child.png"}    ,
+    {"id_":9,"src":"./images/coward.png"},
+    {"id_":10,"src":"./images/forest.jpg"}    ,
+    {"id_":11,"src":"./images/fox.png"}    ,
+    {"id_":12,"src":"./images/power.webp"} ,
+    {"id_":13,"src":"./images/cc1.jpg"},
+    {"id_":14,"src":"./images/cc2.jpg"},  
+    {"id_":15,"src":"./images/cc3.jpg"},
+    {"id_":16,"src":"./images/cc4.jpg"}, 
+    {"id_":17,"src":"./images/cc5.jpg"},
+    {"id_":18,"src":"./images/cc6.jpeg"}, 
+    {"id_":19,"src":"./images/cc7.jpg"},
+    {"id_":20,"src":"./images/cc8.jpg"}
+]}

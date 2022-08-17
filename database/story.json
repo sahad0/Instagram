@@ -3,51 +3,51 @@
     "id":1,
     "name":"fifi______x",
     "source":"./images/me.jpg",
-    "story":"./images/st2.jpg"
+    "story":"./images/pc.jpeg"
 },
 {   "id":2,
     "name":"ErenYeagar",
     "source":"./images/1.jpg",
-    "story":"./images/st1.jpg"
+    "story":"./images/fox.png"
 },
 {   "id":3,
     "name":"Naruto",
     "source":"./images/2.jpg",
-    "story":"./images/st2.jpg"
+    "story":"./images/face.jpg"
 },
 {   "id":4,
     "name":"Hinataa",
     "source":"./images/3.png",
-    "story":"./images/st1.jpg"
+    "story":"./images/angry.jpg"
 },
 {   "id":5,
     "name":"GojoGag",
     "source":"./images/4.jpg",
-    "story":"./images/st1.jpg"
+    "story":"./images/cc1.jpg"
 },
 {   "id":6,
     "name":"ENo_NoW",
     "source":"./images/5.jpg",
-    "story":"./images/st1.jpg"
+    "story":"./images/cc3.jpg"
 },
 {   "id":7,
     "name":"JOkerJk",
     "source":"./images/6.jpg",
-    "story":"./images/st1.jpg"
+    "story":"./images/cc7.jpg"
 },
 {   "id":8,
     "name":"THeLast",
     "source":"./images/7.jpg",
-    "story":"./images/st1.jpg"
+    "story":"./images/cc2.jpg"
 },
 {   "id":9,
     "name":"MikeTys_",
     "source":"./images/8.jpg",
-    "story":"./images/st1.jpg"
+    "story":"./images/cc8.jpg"
 },
 {   "id":10,
     "name":"Willy",
     "source":"./images/9.jpg",
-    "story":"./images/st1.jpg"
+    "story":"./images/power.webp"
 }
 ]}

@@ -127,8 +127,11 @@ export default function PostAdd({post,setPost}) {
                     <label className="mt-3 ">
                        
                         <Input className='my-3' placeholder="Caption" onChange={(e)=>{setComment(e.target.value)}} value={comment} />
-                        <input id="picInput" onChange={handleChange} type="file" accept="images/*" />
-                        <img id="pic" src="" alt="img" className='img-fluid' />
+                        <label >
+                          <img src='./images/upload.png' alt="pic" />
+                          <input id="picInput" onChange={handleChange} type="file" accept="images/*" hidden />
+                        </label>
+                        <img id="pic" src="./images/white.png" alt="img" className='img-fluid' />
                     </label>
                 </Modal>  
 

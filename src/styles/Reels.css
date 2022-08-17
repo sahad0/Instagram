@@ -1,0 +1,86 @@
+.grid-system{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    column-width: 33%;
+    padding: 0 20%;
+    
+   
+}
+.hold{
+    overflow: hidden;
+}
+.hold img {
+    transform-origin: 0 0;
+    transition: transform .5s, visibility .25s ease-in;
+    
+  }
+  
+  /* The Transformation */
+  .hold:hover img {
+    transform: scale(1.2);
+    filter: grayscale(1);
+  }
+/* .coll{
+    transition: 0.2s ease-in-out;
+    overflow: auto;
+}
+.coll:hover{
+    
+   transform: scale(1.05);
+} */
+
+
+
+.model{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    transition: opacity .4s ease,visibility .4s ease, transform .5s ease-in-out;
+    background: black;
+    transform: scale(0);
+    z-index: 999;
+    top:0;
+    opacity: 0;
+    left: 0;
+}
+.open{
+    
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.model img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    
+     .grid-system{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-width: 50%;
+        column-count: 2;
+        padding: 0 4%;
+     }
+    
+  }
