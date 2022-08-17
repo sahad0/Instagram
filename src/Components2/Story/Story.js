@@ -1,17 +1,34 @@
 import React, { useState } from 'react'
 
-function Story({stories}) {
+function Story({stories,setStories}) {
 
     
     const [open, setOpen] = useState(false);
     const [modalImg,setModalImg] = useState('');
 
-    function setStory(story){
-            setModalImg(story);
+   
+
+    function StoryView(story,id){
+        setModalImg(story);
             if(modalImg){
                 setOpen(true);
+        }
+        const arr = [...stories];
+        
+        const update = arr.filter((k)=>{
+            if(k.id === id){
+                k.view = false;
+
             }
+            return k;
+        });
+
+        setStories(update);
+        
+        
+        
     }
+   
 
 
     if(stories){
@@ -20,8 +37,8 @@ function Story({stories}) {
             <div key={i} >
             
                 <li >
-                    <div onClick={()=>{setStory(story.story)}}  className="position-relative my-2" style={{left:"0",marginRight:"15px",}} key={story.id}>
-                        <div className="position-relative" style={{width: "60px", height:"60px", borderRadius:"50%", border: "2px solid #e84118", padding: "1px"}}>
+                    <div onClick={()=>{StoryView(story.story,story.id)}}  className="position-relative my-2" style={{left:"0",marginRight:"15px",}} key={story.id}>
+                        <div className="position-relative" style={story.view ? {width: "60px", height:"60px", borderRadius:"50%", border: "2px solid #e84118", padding: "1px"} : {width: "60px", height:"60px", borderRadius:"50%", border: "2px solid gray", padding: "1px"}}>
                         <img src={story.source} alt="..." draggable="false" className="img-fluid rounded-circle" style={{cursor:"pointer"}} />
                         </div>
                         <div className=" text-small mx-2"><small>{story.name}</small></div>

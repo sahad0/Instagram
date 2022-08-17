@@ -65,7 +65,7 @@ function Newsfeed() {
                     <section className='story-container'>
                         <div className='card my-2 mx-1' >
                           <ul className='storylist' style={{listStyle:"none",display:"flex",flexDirection:"row",overflowY:"auto"}}>
-                              <Story stories={stories} />
+                              <Story stories={stories} setStories={setStories} />
                             </ul>
                         </div>
 
