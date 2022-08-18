@@ -5,7 +5,7 @@ export default function ReelsRender({img,setOpen,setModalImg,viewmodal}) {
     return (img.map((k,i)=>{
         return(
             
-                <div className='hold' key={i} onClick={()=>{viewmodal(k.src)}}>
+                <div className='hold' key={i} onClick={()=>{viewmodal(k.src)}} >
                     <div style={{display:"flex",alignItems:"center",justifyContent:"center",}}>
                     
                     <img alt="picc" draggable={false} style={{zIndex:"0"}} src={k.src} className='img-fluid coll m-1'  />        

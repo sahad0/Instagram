@@ -10,10 +10,12 @@
 }
 .hold{
     overflow: hidden;
+    border-radius: 12px ;
 }
 .hold img {
     transform-origin: 0 0;
     transition: transform .5s, visibility .25s ease-in;
+    border-radius: 12px ;
     
   }
   
