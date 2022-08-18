@@ -27,6 +27,7 @@ function Newsfeed() {
     }
     async function fetchStory(){
       const stry = await axios.get("https://sahad0.github.io/Instagram-Story/story.json");
+
       if(stry){
         setStories(stry.data.story);
       }
