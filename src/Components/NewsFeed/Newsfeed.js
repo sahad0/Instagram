@@ -26,28 +26,27 @@ function Newsfeed() {
       fetchSuggest();
     }
     async function fetchStory(){
-      const stry = await axios.get("http://localhost:8000/story");
-     
+      const stry = await axios.get("https://sahad0.github.io/Instagram-Story/story.json");
       if(stry){
-        setStories(stry.data);
+        setStories(stry.data.story);
       }
       
     }
 
     async function fetchSuggest(){
-      const sgst = await axios.get("http://localhost:8002/sgst");
+      const sgst = await axios.get("https://sahad0.github.io/Instagram-Suggestions/suggest.json");
      
       if(sgst){
-        setSuggest(sgst.data);
+        setSuggest(sgst.data.sgst);
       }
       
     }
 
     async function fetchPost(){
-      const pst = await axios.get("http://localhost:8001/pst");
+      const pst = await axios.get("https://sahad0.github.io/Instagram-post/post.json");
      
       if(pst){
-        setPost(pst.data);
+        setPost(pst.data.pst);
       }
       
     }

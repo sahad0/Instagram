@@ -12,10 +12,10 @@ export default function Reels() {
         },[]);
 
         async function getImg(){
-                const data = await axios.get('http://localhost:8003/reels');
+                const data = await axios.get('https://sahad0.github.io/Instagram-Reels/reels.json');
                 if(data){
                         
-                        setImg(data.data);
+                        setImg(data.data.reels);
                 }
         }
 
