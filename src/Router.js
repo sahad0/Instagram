@@ -13,9 +13,10 @@ function Router() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="/Instagram" exact element={<><Newsfeed /></>} />
           <Route path="/login" element={<></>} />
           <Route path="/signup" element={<>SignUp</>} />
-          <Route path="/" element={<><Newsfeed /></>} />
+
           <Route path="/reels" element={<><Reels /></>} />
           <Route path="/logout" element={<><Logout /></>} />
         </Routes>

@@ -1,7 +1,7 @@
 { "sgst" : [
-    {"id_":"1","name":"ENo_NoW","source":"./images/5.jpg"},
-    {"id_":"2","name":"JOkerJk","source":"./images/6.jpg"},
-    {"id_":"3","name":"THeLast","source":"./images/7.jpg"},
-    {"id_":"4","name":"MikeTys_","source":"./images/8.jpg"}
+    {"id_":"1","name":"ENo_NoW","source":"5.jpg"},
+    {"id_":"2","name":"JOkerJk","source":"6.jpg"},
+    {"id_":"3","name":"THeLast","source":"7.jpg"},
+    {"id_":"4","name":"MikeTys_","source":"8.jpg"}
     
 ]}
