@@ -15,7 +15,7 @@ function Router() {
         <Routes>
           <Route path="/login" element={<></>} />
           <Route path="/signup" element={<>SignUp</>} />
-          <Route path="/newsfeed" element={<><Newsfeed /></>} />
+          <Route path="/" element={<><Newsfeed /></>} />
           <Route path="/reels" element={<><Reels /></>} />
           <Route path="/logout" element={<><Logout /></>} />
         </Routes>
